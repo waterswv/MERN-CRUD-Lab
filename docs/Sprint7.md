@@ -16,16 +16,9 @@ https://mern-comment-box-api.herokuapp.com/comments
 
  Let's change our React app to hit this endpoint.
 
- In your server.js, comment out the mongoose connection - we no longer needed it.
 
- Next, set our api endpoint to be the Heroku backend:
 
-```js
-//use router config when we call /API
-app.use('https://mern-comment-box-api.herokuapp.com/comments', router);
-```
-
-And now, when we render our comment box, we can also use this:
+Now, when we render our comment box, we can also use this:
 
 ```js
 ReactDOM.render(
@@ -49,3 +42,5 @@ loadCommentsFromServer(){
 ```
 
 Now, you can run `npm start` to hit a real live backend!
+
+Now, note that the API code in our server.js is being replaced by the backend endpoint, so we no longer need that. Axios is taking care of hitting our backend for us! Feel free to refactor and/or remove the API portion of this lab to prove it to yourself.
